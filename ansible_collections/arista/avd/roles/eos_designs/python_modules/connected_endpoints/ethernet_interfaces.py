@@ -106,6 +106,8 @@ class EthernetInterfacesMixin(UtilsMixin):
             interface_description = adapter.get("description")
 
         # Common ethernet_interface settings
+        #import epdb
+        #epdb.set_trace()
         ethernet_interface = {
             "name": adapter["switch_ports"][node_index],
             "peer": peer,
@@ -115,6 +117,7 @@ class EthernetInterfacesMixin(UtilsMixin):
             "description": self.shared_utils.interface_descriptions.connected_endpoints_ethernet_interfaces(peer, peer_interface, interface_description),
             "speed": adapter.get("speed"),
             "shutdown": not adapter.get("enabled", True),
+            "validate_state": adapter.get("validate_state", True),
             "eos_cli": adapter.get("raw_eos_cli"),
             "struct_cfg": adapter.get("structured_config"),
         }

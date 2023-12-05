@@ -5210,6 +5210,12 @@
             },
             "title": "Ethernet Segment"
           },
+          "validate_state": {
+            "type": "boolean",
+            "default": true,
+            "description": "set false to skip verification of interface",
+            "title": "Validate State"
+          },
           "port_channel": {
             "type": "object",
             "description": "Used for port-channel adapter.",
@@ -11017,6 +11023,12 @@
               "^_.+$": {}
             },
             "title": "Ethernet Segment"
+          },
+          "validate_state": {
+            "type": "boolean",
+            "default": true,
+            "description": "set false to skip verification of interface",
+            "title": "Validate State"
           },
           "port_channel": {
             "type": "object",

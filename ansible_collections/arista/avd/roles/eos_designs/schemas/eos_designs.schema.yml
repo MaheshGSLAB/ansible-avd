@@ -3469,6 +3469,10 @@ $defs:
             type: bool
             description: Disable preemption for single-active forwarding when auto/manual
               DF preference is configured.
+      validate_state:
+        type: bool
+        default: true
+        description: set false to skip verification of interface
       port_channel:
         type: dict
         description: Used for port-channel adapter.
